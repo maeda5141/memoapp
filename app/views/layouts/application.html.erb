@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Memoapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <div class="icon">
+  <%= fa_icon("bars") %>
+  </div>
+  <%= link_to "プロメモ", root_path %>
+  </header>
+  <ul class="menu">
+  <% if user_signed_in? %>
+  <li><%= link_to '投稿する',new_article_path %></li>
+  <li><%= link_to 'マイページ', user_path(current_user.id) %></li>
+  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+  <% else %>
+  <li><%= link_to '新規登録',new_user_registration_path %></li>
+  <li><%= link_to 'ログイン', new_user_session_path %></li>
+  <% end %>
+  </ul>
+  <div class="container">
+    <%= yield %>
+<div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <script>
+  $(function () {
+    $('.icon').on('mouseover', function () {
+      $('.menu').css('display', 'block');
+    }).on('mouseout', function () {
+      $('.menu').css('display', 'none');
+    });
+
+
+    $('.menu').on('mouseover', function () {
+      $(this).css('display', 'block');
+    }).on('mouseout', function () {
+      $(this).css('display', 'none');
+    });
+  });
+  </script>
+  </body>
+</html>

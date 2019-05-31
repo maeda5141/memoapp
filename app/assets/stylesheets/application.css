@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ /*
+ *= require font-awesome
+ */
+
+
+ body {
+  background: #eee;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 1px solid black;
+  background: white;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+header > a {
+  margin-left: 120px;
+}
+
+.icon {
+  float: right;
+  font-size: 40px;
+  margin-right: 75px;
+  width: 96px;
+}
+
+ul {
+  list-style: none;
+  
+}
+
+.menu {
+  position: fixed;
+  top: 60px;
+  right: 70px;
+  background: white;
+  padding-left: 0px;
+  text-align: center;
+  margin: 0;
+  border-top: 1px solid black;
+  border-right: 1px solid #999;
+  border-left: 1px solid #999;
+  display: none;
+}
+
+.menu > li {
+  padding: 8px;
+  border-bottom: 1px solid #999;
+}
+
+
+.container {
+  width: 600px;
+  height: 100%;
+  padding: 60px 30px;
+  margin: 0 auto;
+  background: white;
+}
+
+.pagination {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+

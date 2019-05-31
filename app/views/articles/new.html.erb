@@ -1,0 +1,8 @@
+<p><%= form_for (@article) do |f| %></p>
+<p>メモを書いて投稿してください</p>
+<p><span>タイトル：</span><%= f.text_field :title, placeholder: "必須",  required: true %></p>
+<p>本文</p>
+<p><%= f.text_area :body, placeholder: "必須",  required: true %></p>
+<p><span>公開する</span><%= f.check_box :public, {}, 1, 0 %></p>
+<p><%= f.submit "投稿" %></p>
+<% end %>
