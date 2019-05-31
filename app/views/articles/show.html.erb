@@ -10,26 +10,14 @@
 </div>
 <% end %>
 
-
-
-
-<%# <%= form_for ([@article, @comment]) do |f| %>
-<%# <%= f.text_area :comment, required: true %> 
-<%# <%= f.submit "コメントする" %> 
-<%# <% end %> 
-
 <script>
-
-'use strict'
-{
-const s = document.querySelector("#delete");
-s.addEventListener('click', function () {
-    
-  let pop = confirm('このメモを削除しますか？');
+$(function () {
+  $('#delete').on('click', function () {
+    let pop = confirm('このメモを削除しますか？');
   
   if (pop === false ) {
-   s.dataset.method = 'get';
+  return false;
   }
   });
-}
+});
 </script>
