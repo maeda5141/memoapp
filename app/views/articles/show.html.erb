@@ -1,23 +1,13 @@
+<%= render "checked_article.html.erb" %>
+<div class="container">
 <p class="writer"><%= @article.user.name %>さんのメモ</p>
-<h1><%= @article.title %></h1>
+<h2 class="article_show_title"><%= @article.title %></h1>
 <div class="article_area"><%= simple_format(h(@article.body) )%></div>
-
 
 <% if user_signed_in? && @article.user.id == current_user.id %>
 <div class="select_area">
-<div><%= link_to '編集', edit_article_path(@article.id) %></div>
-<div><%= link_to '削除', article_path(@article.id), method: :delete ,id: "delete" %></div>
+<div class="select_area__button"><%= link_to '編集', edit_article_path(@article.id) %></div>
+<div class="select_area__button"><%= link_to '削除', article_path(@article.id), method: :delete ,id: "delete" %></div>
 </div>
 <% end %>
-
-<script>
-$(function () {
-  $('#delete').on('click', function () {
-    let pop = confirm('このメモを削除しますか？');
-  
-  if (pop === false ) {
-  return false;
-  }
-  });
-});
-</script>
+  </div>

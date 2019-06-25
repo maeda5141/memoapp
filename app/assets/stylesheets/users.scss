@@ -2,7 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user_page {
+  margin-top: 60px;
+  padding-top: 20px;
+  &__title {
+    margin-bottom: 30px;
+  }
+}
 
-.user_page > h2, .user_page > p {
+.user_page > h2 {
+  text-align: center;
+}
+
+.users_articles {
+  text-align: center;
+ font-size: 18px;
+}
+
+.link_to_edit_user {
+  float: right;
+  font-weight: normal;
+  font-size: 14px;
+  width: 80px;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #888;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 15px;
+  label {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .input_form {
+    display: inline-block;
+    margin-bottom: 5px;
+   font-size: 14px;
+   width: 250px;
+   height: 28px;
+  }
+}
+
+
+.user_update_button, .user_delete_button {
+  width: 100px;
+  height: 30px;
+}
+.back_button {
+  float: right;
+  font-size: 14px;
+  width: 120px;
+  padding: 5px;
+  border: 1px solid #888;
+  border-radius: 3px;
   text-align: center;
 }

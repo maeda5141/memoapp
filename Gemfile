@@ -70,3 +70,5 @@ gem 'devise'
 gem "font-awesome-rails"
 
 gem 'kaminari'
+
+gem 'jquery-rails'

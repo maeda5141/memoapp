@@ -1,32 +1,83 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.flash {
+  background: pink;
+  text-align: center;
+  margin: 60px 0 0;
+}
 
+.search_form {
+  width: 100%;
+  position: relative;
+}
+label[for="search"] {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 5px;
+  right: -1px;
+  background: white;
+  text-align: center;
+  cursor: pointer;
+}
+#search {
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  border: 1px solid #888;
+}
 .article_list {
   padding-left: 0;
-}
-.article_list > li {
+  .article {
+    height: 45px;
+    line-height: 45px;
+  display: flex;
+  flex-wrap: nowrap;
   padding: 10px;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 18px;
   border-bottom: 1px solid #ddd;
+  
+  &__title {
+    width: 350px;
+    overflow: hidden;
+    margin: 0;
+  }
+   a:hover {
+    text-decoration: underline;
+  }
+  p {
+    width: 150px;
+    text-align: right;
+    font-size: 12px;
+    color: #888;
+  }
+ }
 }
+   p.articles_view {
+    text-align: center;
+    font-size: 20px;
+  }
 
-.article_list > p {
-  text-align: center;
-  font-size: 20px;
-}
 
-.article_list > li > a:hover {
-  text-decoration: underline;
-}
 
 .back_to_top {
   text-align: center;
 }
 
-.new_article {
+.new_article_area {
+  margin-top: 80px;
   text-align: center;
+}
+
+.edit_article_area {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.new_article {
 }
 #article_title {
   width: 300px;
@@ -34,41 +85,49 @@
 }
 
 #article_body {
-  width: 400px;
+  width: 480px;
   height: 600px;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 30px;
   font-family: Monaco;
 }
 
-input[type="submit"] {
-  width: 50px;
-  height: 50px;
-}
+
 
 .article_area {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Monaco;
+  margin-bottom: 20px;
+  line-height: 30px;
 }
 
 .writer {
  text-align: right;
-  
+  margin-top: 70px;
+}
+.back_to_top {
+  margin: 70px auto 20px;
+  &__button {
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
 }
 
-.back_to_top_button {
-  margin: 16px auto;
-  padding: 5px;
-  width: 200px;
-  border: 1px solid #333;
-  border-radius: 5px;
-}
+.select_area {
+  margin-bottom: 50px;
 
-.select_area > div {
-  float: left;
-  padding: 3px;
-  border: 1px solid #777;
-  border-radius: 3px;
-  margin: 5px;
+  &__button {
+    float: left;
+    padding: 3px;
+    border: 1px solid #777;
+    border-radius: 3px;
+    margin: 5px;
+  }
+
 }

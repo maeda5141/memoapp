@@ -1,9 +1,17 @@
+<p class="flash"><%= flash[:fail] %></p>
+<%= render "checked_article.html.erb" %>
+<div class="container">
+<p class="articles_view">＜みんなの投稿＞</p>
+<form class="search_form">
+<label for="search">
+<%= fa_icon("search") %>
+</label>
+<input type="text" id="search" placeholder="メモのタイトルを入力">
+</form>
 <ul class="article_list" >
-<p>＜みんなの投稿＞</p>
 <% @articles.each do |article| %>
-<% if article.public == 1 %>
-<li><%= link_to article.title, article_path(article.id) %></li>
-<% end %>
+<li class="article"><div class="article__title"><%= link_to article.title, article_path(article.id) %></div><p><%= article.user.name %>さんの投稿</p></li>
 <% end %>
 <%= paginate(@articles) %>
 </ul>
+  </div>

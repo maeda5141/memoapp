@@ -1,0 +1,8 @@
+<div id="app">
+  <div class="checked_article_list">
+  <div class="checked_article_list__title">最近見たページ</div>
+  <div class="checked_article_list__item" v-for="page in pages">
+  <a v-bind:href="page.url">{{page.title}}</a>
+  </div>
+  </div>
+</div>
