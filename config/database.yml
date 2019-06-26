@@ -60,7 +60,7 @@ production:
   pool: 5
   username: secret-reef-38697
   password: <%= ENV['MEMOAPP_DATABASE_PASSWORD'] %>
-  host: secret-reef-38697
+  host: secret-reef-38697.herokuapp.com
   database: secret-reef-38697_production
 
 
