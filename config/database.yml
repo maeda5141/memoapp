@@ -55,13 +55,21 @@ production:
   # username: memoapp
   # password: <%= ENV['MEMOAPP_DATABASE_PASSWORD'] %>
 
+  # adapter: postgresql
+  # encoding: unicode
+  # pool: 5
+  # username: secret-reef-38697
+  # password: <%= ENV['MEMOAPP_DATABASE_PASSWORD'] %>
+  # host: secret-reef-38697.herokuapp.com
+  # database: secret-reef-38697_production
+
+  <<: *default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: secret-reef-38697
-  password: <%= ENV['MEMOAPP_DATABASE_PASSWORD'] %>
-  host: secret-reef-38697.herokuapp.com
-  database: secret-reef-38697_production
+
+
+
 
 
 
