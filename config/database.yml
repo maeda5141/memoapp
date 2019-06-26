@@ -58,10 +58,10 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: memoapp
+  username: secret-reef-38697
   password: <%= ENV['MEMOAPP_DATABASE_PASSWORD'] %>
-  host: memoapp
-  database: memoapp_production
+  host: secret-reef-38697
+  database: secret-reef-38697_production
 
 
 
