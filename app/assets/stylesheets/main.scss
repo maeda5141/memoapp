@@ -1,6 +1,7 @@
 
 body {
-  background: #c2eeff;
+  // background: #c2eeff;
+  background: #eee;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
@@ -23,8 +24,7 @@ header {
   line-height: 60px;
   text-align: center;
   font-size: 30px;
-  border-bottom: 1px solid black;
-  background: white;
+  background: #0c0;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -32,7 +32,9 @@ header {
   left: 0px;
   z-index: 2;
   a {
+    color: white;
     margin-left: 120px;
+    font-weight: bold;
   }
 }
 
@@ -106,6 +108,9 @@ ul {
   margin-top: 20px;
   font-size: 18px;
   text-align: center;
+  a:hover {
+    text-decoration: underline;
+  }
   .current{ 
     font-size: 24px;
   }

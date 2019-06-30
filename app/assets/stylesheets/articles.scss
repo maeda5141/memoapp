@@ -44,9 +44,10 @@ label[for="search"] {
     width: 350px;
     overflow: hidden;
     margin: 0;
-  }
-   a:hover {
-    text-decoration: underline;
+    font-weight: bold;
+    a:hover {
+     text-decoration: underline;
+   }
   }
   p {
     width: 150px;
@@ -106,6 +107,7 @@ label[for="search"] {
 .writer {
  text-align: right;
   margin-top: 70px;
+  color: #888;
 }
 .back_to_top {
   margin: 70px auto 20px;
@@ -125,9 +127,9 @@ label[for="search"] {
   &__button {
     float: left;
     padding: 3px;
-    border: 1px solid #777;
+    border: 1px solid #ddd;
     border-radius: 3px;
-    margin: 5px;
+    margin-right: 20px;
   }
 
 }

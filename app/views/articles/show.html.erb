@@ -1,6 +1,6 @@
 <%= render "checked_article.html.erb" %>
 <div class="container">
-<p class="writer"><%= @article.user.name %>さんのメモ</p>
+<p class="writer"><%= @article.user.name %>さんの投稿</p>
 <h2 class="article_show_title"><%= @article.title %></h1>
 <div class="article_area"><%= simple_format(h(@article.body) )%></div>
 
@@ -10,4 +10,4 @@
 <div class="select_area__button"><%= link_to '削除', article_path(@article.id), method: :delete ,id: "delete" %></div>
 </div>
 <% end %>
-  </div>
+</div>

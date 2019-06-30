@@ -12,6 +12,6 @@
 <% @articles.each do |article| %>
 <li class="article"><div class="article__title"><%= link_to article.title, article_path(article.id) %></div><p><%= article.user.name %>さんの投稿</p></li>
 <% end %>
-<%= paginate(@articles) %>
 </ul>
-  </div>
+<%= paginate(@articles) %>
+</div>
