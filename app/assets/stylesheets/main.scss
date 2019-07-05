@@ -1,6 +1,5 @@
 
 body {
-  // background: #c2eeff;
   background: #eee;
   padding: 0;
   margin: 0;
@@ -93,6 +92,9 @@ ul {
       overflow: hidden;
       border-bottom: 1px dashed #ccc;
       font-size: 14px;
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -100,7 +102,7 @@ ul {
   width: 500px;
   height: 100%;
   padding: 10px 30px 50px;
-  margin: 0 auto;
+  margin: 0px auto 0;
   background: white;
 }
 

@@ -1,16 +1,16 @@
 <%= render "/articles/checked_article.html.erb" %>
-<div class="container">
-<div class="user_page">
-<div class="user_page__title">
-<h2><%= @user.name %>さんのページ<span class="link_to_edit_user" ><%= link_to '登録情報', edit_user_registration_path %></span>
-</h2>
-</div>
-<p class="users_articles">＜投稿したメモ一覧＞</p>
-<ul class="article_list" >
-<% @articles.each do |article| %>
-<li class="article"><div class="article__title"><%= link_to article.title, article_path(article.id) %></div></li>
-<% end %>
-<%= paginate(@articles) %>
-</ul>
-</div>
+<div class="container user_page">
+  <div class="user_page__title">
+      <%= link_to edit_user_registration_path do %>
+      <div class="link_to_edit_user">登録情報の編集</div>
+      <% end %>
+      <h2><%= @user.name %>さんのページ</h2>
   </div>
+  <p class="users_articles">＜投稿したメモ一覧＞</p>
+  <ul class="article_list" >
+    <% @articles.each do |article| %>
+    <li class="article"><div class="article__title"><%= link_to article.title, article_path(article.id) %></div></li>
+    <% end %>
+    <%= paginate(@articles) %>
+  </ul>
+</div>
