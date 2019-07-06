@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin button-design($color){
+  padding: 0;
+  width: 240px;
+  height: 40px;
+  font-size: 16px;
+  background: $color;
+  border-radius: 3px;
+  color: White;
+
+}
+
 .user_page {
   margin-top: 60px;
   padding-top: 20px;
@@ -25,9 +36,13 @@
   font-size: 14px;
   margin: 0;
   padding: 5px;
-  border: 1px solid #888;
+  border: 1px solid #1e90ff;
   border-radius: 3px;
   text-align: center;
+  color: #1e90ff;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .user_input_form {
@@ -54,41 +69,63 @@
       height: 30px;
     }
   }
-  .new_registration_link {
-    color: blue;
-  }
 }
 
 
 .user_update_button, .user_delete_button {
-  width: 100px;
-  height: 30px;
-  background: #1e90ff;
-  color: white;
-  border-radius: 3px;
+  @include button-design(#1e90ff)
 }
 .user_delete_button  {
+  display: block;
+  width: 200px;
   background: #ccc;
+  margin: 10px auto 0;
 }
 .user_delete_message {
   font-size: 14px;
   width: 380px;
 }
-.back_button {
-  float: right;
-  font-size: 12px;
-  width: 100px;
-  height: 25px;
-  line-height: 25px;
-  padding: 5px;
-  border: 1px solid #888;
-  border-radius: 3px;
-  text-align: center;
-}
+
 
 .user_page_footer {
   border-top: 1px dashed #333;
   padding-top: 30px;
   width: 60%;
   margin: 0 auto;
+  p {
+    margin: 0 auto;
+    width: 240px;
+  }
+}
+
+.actions {
+  p{
+    margin: 0; 
+  }
+  text-align: center;
+  padding-top: 30px;
+  &__signup_button{
+    @include button-design(#0c0);
+  }
+  &__signin_button {
+    @include button-design(#1e90ff);
+  }
+  &__signin_link {
+    @include button-design(#ccc);
+    margin-top: 20px;
+    display: inline-block;
+    line-height: 40px;
+  }
+  &__signup_link {
+    @include button-design(#0c0);
+    margin-top: 20px;
+    display: inline-block;
+    line-height: 40px;
+  }
+  &__back_button {
+    @include button-design(#ccc);
+    display: inline-block;
+    line-height: 40px;
+    margin-top: 20px;
+  }
 }
