@@ -23,7 +23,11 @@
       <div class="header_button">
         <%= link_to "投稿する", new_article_path, class: "header_button_post" %>
         <div class="header_button_user">
+        <% if user_signed_in? %>
+          <%= current_user.name %>さん
+        <% else %>
           ようこそゲストさん
+        <% end %>
           <%= fa_icon("caret-down") %>
         </div>
       </div>
@@ -31,7 +35,7 @@
   </header>
   <ul class="menu">
   <% if user_signed_in? %>
-  <li><%= link_to '投稿する',new_article_path %></li>
+  <%# <li><%= link_to '投稿する',new_article_path %>
   <li><%= link_to 'マイページ', user_path(current_user.id) %></li>
   <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
   <% else %>

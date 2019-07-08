@@ -90,16 +90,17 @@ ul {
 .menu {
   position: fixed;
   top: 60px;
-  right: 70px;
+  right: 100px;
   background: white;
   padding-left: 0px;
   text-align: center;
   margin: 0;
-  border-top: 1px solid black;
+  // border-top: 1px solid black;
   border-right: 1px solid #999;
   border-left: 1px solid #999;
   display: none;
    li {
+    width: 100px;
     padding: 8px;
     border-bottom: 1px solid #999;
   }

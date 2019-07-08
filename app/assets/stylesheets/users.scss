@@ -111,13 +111,13 @@
     @include button-design(#1e90ff);
   }
   &__signin_link {
-    @include button-design(#1e90ff);
+    @include button-design(#ccc);
     margin-top: 20px;
     display: inline-block;
     line-height: 40px;
   }
   &__signup_link {
-    @include button-design(#0c0);
+    @include button-design(#ccc);
     margin-top: 20px;
     display: inline-block;
     line-height: 40px;
