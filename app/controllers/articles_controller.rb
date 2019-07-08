@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @articles = Article.all.where(public: 1).order('created_at DESC').page(params[:page]).per(10)
   end
@@ -51,4 +53,5 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :body, :public).merge(user_id: current_user.id)
   end
+
 end
