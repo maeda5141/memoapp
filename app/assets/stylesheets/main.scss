@@ -17,12 +17,14 @@ a {
   text-decoration: none;
 }
 
+
+
 header {
   width: 100%;
   height: 60px;
   line-height: 60px;
   text-align: center;
-  font-size: 30px;
+ 
   background: #0c0;
   margin: 0;
   padding: 0;
@@ -30,10 +32,45 @@ header {
   top: 0px;
   left: 0px;
   z-index: 2;
-  a {
-    color: white;
-    margin-left: 120px;
-    font-weight: bold;
+  .header {
+    position: relative;
+    vertical-align: center;
+    &_button {
+      height: 60px;
+      position: absolute;
+      right: 120px;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      &_post {
+        display: block;
+        width: 100px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 5px;
+        line-height: 40px;
+        color: white;
+        margin-right: 20px;
+      }
+      &_user {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+    &_title {
+      position: absolute;
+      top: 0px;
+      left: 45%;
+      display: block;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+    }
   }
 }
 
