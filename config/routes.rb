@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :new]
   end
   resources :users, only: [:show]
-  namespace api do
+  namespace :api do
     resources :articles, only: [:index], defaults: {format: 'json'}
+  end
 end
