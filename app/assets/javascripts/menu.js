@@ -1,8 +1,10 @@
 $(function () {
   $(document).on('turbolinks:load', function() {
     
+
     $('.header_button_user').on('click', function () {
-      $('.menu').css('display', 'block');
+      // $('.menu').css('display', 'block');
+      $('.menu').slideToggle();
     });
     $(document).on('click', function () {
       if($(event.target).closest('.header_button_user').length === 0) {

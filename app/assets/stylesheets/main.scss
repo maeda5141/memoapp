@@ -17,7 +17,17 @@ a {
   text-decoration: none;
 }
 
+.icon {
+  float: right;
+  font-size: 40px;
+  margin-right: 75px;
+  width: 96px;
+}
 
+ul {
+  list-style: none;
+  
+}
 
 header {
   width: 100%;
@@ -60,6 +70,31 @@ header {
         padding: 0 5px;
         border-radius: 5px;
         cursor: pointer;
+        position: relative;
+        .menu {
+          position: absolute;
+          top: 50px;
+          right: -10px;
+          background: white;
+          padding-left: 0px;
+          text-align: center;
+          margin: 0;
+          border-right: 1px solid #999;
+          border-left: 1px solid #999;
+          display: none;
+           a {
+            text-decoration: none;
+            display: block;
+            width: 100px;
+            padding: 5px;
+            border-bottom: 1px solid #999;
+          &:hover {
+            background: #ccc;
+            color: white;
+          }
+          
+          }
+        }
       }
     }
     &_title {
@@ -75,36 +110,7 @@ header {
 }
 
 
-.icon {
-  float: right;
-  font-size: 40px;
-  margin-right: 75px;
-  width: 96px;
-}
 
-ul {
-  list-style: none;
-  
-}
-
-.menu {
-  position: fixed;
-  top: 60px;
-  right: 100px;
-  background: white;
-  padding-left: 0px;
-  text-align: center;
-  margin: 0;
-  // border-top: 1px solid black;
-  border-right: 1px solid #999;
-  border-left: 1px solid #999;
-  display: none;
-   li {
-    width: 100px;
-    padding: 8px;
-    border-bottom: 1px solid #999;
-  }
-}
 @media screen and (max-width: 1110px) {
 .checked_article_list {
   display: none;

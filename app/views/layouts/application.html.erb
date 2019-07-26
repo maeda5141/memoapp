@@ -16,9 +16,6 @@
   
   <header>
     <div class="header">
-      <%# <div class="icon">
-        <%= fa_icon("bars") %>
-      <%# </div> %>
         <%= link_to "プロメモ", root_path, class: "header_title"%>
       <div class="header_button">
         <%= link_to "投稿する", new_article_path, class: "header_button_post" %>
@@ -29,20 +26,20 @@
           ようこそゲストさん
         <% end %>
           <%= fa_icon("caret-down") %>
+          <div class="menu">
+              <% if user_signed_in? %>
+                <%= link_to 'マイページ', user_path(current_user.id) %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+              <% else %>
+                <%= link_to '新規登録',new_user_registration_path %>
+                <%= link_to 'ログイン', new_user_session_path %>
+              <% end %>
+          </ul>
         </div>
       </div>
     </div>
   </header>
-  <ul class="menu">
-  <% if user_signed_in? %>
-  <%# <li><%= link_to '投稿する',new_article_path %>
-  <li><%= link_to 'マイページ', user_path(current_user.id) %></li>
-  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-  <% else %>
-  <li><%= link_to '新規登録',new_user_registration_path %></li>
-  <li><%= link_to 'ログイン', new_user_session_path %></li>
-  <% end %>
-  </ul>
+  
     <%= yield %>
   </body>
 </html>
