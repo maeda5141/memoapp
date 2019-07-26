@@ -125,12 +125,14 @@ label[for="search"] {
 .back_to_top {
   margin: 70px auto 20px;
   &__button {
+    display: block;
     margin: 0 auto;
     text-align: center;
-    padding: 5px;
+    padding: 10px 5px;
     width: 200px;
-    border: 1px solid #333;
     border-radius: 5px;
+    color: white;
+    background: #1e90ff;
   }
 }
 

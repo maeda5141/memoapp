@@ -17,6 +17,7 @@ $(function () {
       })
       .done(function (articles) {
         $('.article').remove();
+        $('.pagination').remove();
         articles.forEach(function (article) {
           $('.article_list').append(`
           <li class="article">
