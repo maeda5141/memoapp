@@ -14,8 +14,6 @@
     }
     var pageUrl = location.href;
     
-    // if (pageUrl.match(/http:\/\/localhost:3000\/articles\/\d+$/)) {
-      // https://secret-reef-38697.herokuapp.com/articles/1
     if (pageUrl.match(/[htps]{4,5}:\/\/[a-z0-9.:-]+\/articles\/\d+$/)) {
       var pageTitle = document.querySelector('.article_show_title').textContent;
       pageData.title = pageTitle;

@@ -3,7 +3,6 @@ $(function () {
     
 
     $('.header_button_user').on('click', function () {
-      // $('.menu').css('display', 'block');
       $('.menu').slideToggle();
     });
     $(document).on('click', function () {
