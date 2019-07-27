@@ -20,7 +20,9 @@
     <div class="header">
         <%= link_to "プロメモ", root_path, class: "header_title"%>
       <div class="header_button">
-        <%= fa_icon("edit") %>
+        <%= link_to new_article_path do %>
+          <%= fa_icon("edit") %>
+        <% end %>
         <%= link_to "投稿する", new_article_path, class: "header_button_post" %>
         <div class="header_button_user">
           <% if user_signed_in? %>
