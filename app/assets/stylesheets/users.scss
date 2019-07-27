@@ -46,7 +46,7 @@
 }
 
 .user_input_form {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   padding-bottom: 30px;
 
@@ -127,5 +127,12 @@
     display: inline-block;
     line-height: 40px;
     margin-top: 20px;
+  }
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    padding: 0;
   }
 }
