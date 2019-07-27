@@ -109,14 +109,26 @@ header {
   }
 }
 
+.container {
+    width: 500px;
+    height: 100%;
+    padding: 10px 30px 50px;
+    margin: 0px auto;
+    background: white;
+}
 
+@media (max-width: 500px) {
+  .container {
+    width: calc(100% - 60px);
+  }
+}
 
-@media screen and (max-width: 1110px) {
+@media (max-width: 1110px) {
 .checked_article_list {
   display: none;
 }
 }
-@media screen and (min-width: 1110px) {
+@media  (min-width: 1111px) {
   .checked_article_list {
     display: block;
     width: 200px;
@@ -142,13 +154,7 @@ header {
     }
   }
 }
-.container {
-  width: 500px;
-  height: 100%;
-  padding: 10px 30px 50px;
-  margin: 0px auto 0;
-  background: white;
-}
+
 
 .pagination {
   margin-top: 20px;
