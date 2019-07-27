@@ -18,6 +18,12 @@ $(function () {
       .done(function (articles) {
         $('.article').remove();
         $('.pagination').remove();
+        if (!articles.length) {
+          $('.article_list').append(`
+          <li class="article">一致する検索結果がありませんでした。</li>
+          `)
+        } else {
+          
         articles.forEach(function (article) {
           $('.article_list').append(`
           <li class="article">
@@ -28,10 +34,9 @@ $(function () {
           </div>
           <p>${article.userName}さんの投稿</p>
           </li>
-          `);
-          
+          `); 
         } );
-        
+        }
       })
       .fail(function () {
         alert('投稿を取得できませんでした');
