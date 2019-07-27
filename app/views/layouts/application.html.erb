@@ -2,8 +2,10 @@
 <html>
   <head>
     <title>プロメモ</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -20,11 +22,11 @@
       <div class="header_button">
         <%= link_to "投稿する", new_article_path, class: "header_button_post" %>
         <div class="header_button_user">
-        <% if user_signed_in? %>
-          <%= current_user.name %>さん
-        <% else %>
-          ようこそゲストさん
-        <% end %>
+          <% if user_signed_in? %>
+            <%= current_user.name %>さん
+          <% else %>
+            ようこそゲストさん
+          <% end %>
           <%= fa_icon("caret-down") %>
           <div class="menu">
               <% if user_signed_in? %>
@@ -34,7 +36,7 @@
                 <%= link_to '新規登録',new_user_registration_path %>
                 <%= link_to 'ログイン', new_user_session_path %>
               <% end %>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
