@@ -1,10 +1,14 @@
 
-body {
-  background: #eee;
-  padding: 0;
+html {
   margin: 0;
-  font-family: sans-serif;
+  padding: 0;
 }
+  body {
+    background: #eee;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+  }
 
 h1 {
   font-weight: 600;
@@ -109,7 +113,7 @@ header {
       color: white;
       font-weight: bold;
     }
-    @media (max-width: 760px) {
+    @media (max-width: 830px) {
       &_title {
         left: 20px;
         font-size: 20px;
