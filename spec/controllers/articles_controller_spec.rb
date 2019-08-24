@@ -7,5 +7,16 @@ describe ArticlesController do
     expect(response).to render_template :new
   end
  end
+ describe 'GET #edit' do
+  it 'editアクションの@articleが期待された値になっているか' do
+    user = create(:user, id:1)
+    article = create(:article)
+    get :edit, params: {id: article}
+    expect(assigns(:article)).to eq article
+  end
+ 
+  it 'editアクションのビューに遷移するか' do
+  end
+ end
 
 end
