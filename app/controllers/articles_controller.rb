@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  # before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @articles = Article.where(public: 1).order('created_at DESC').page(params[:page]).per(10)
