@@ -27,8 +27,9 @@ describe ArticlesController do
  describe 'GET #index' do
   it '@articlesがcreated_atの降順で取得できるか' do
     user = create(:user, id:1)
-    articles = create_list(:article, 3, created_at: Faker::Time.between(DateTime.now - 2, DateTime.now))
-    articles.sort{|a, b| b.created_at <=> a.created_at }
+    articles = create_list(:article, 3)
+    articles = articles.sort{|a, b| b.created_at <=> a.created_at }
+    binding.pry
     get :index
     expect(assigns(:articles)).to match(articles)
   end
