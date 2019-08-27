@@ -29,7 +29,6 @@ describe ArticlesController do
     user = create(:user, id:1)
     articles = create_list(:article, 3)
     articles = articles.sort{|a, b| b.created_at <=> a.created_at }
-    binding.pry
     get :index
     expect(assigns(:articles)).to match(articles)
   end
