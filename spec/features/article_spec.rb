@@ -16,5 +16,16 @@ let(:user) { create(:user)}
   expect(current_path).to eq root_path
   expect(page).to have_content('投稿する')
 
+  #メモの投稿
+  expect{
+    click_link('投稿する')
+    expect(current_path).to eq new_article_path
+    fill_in 'article_title', with: 'テスト'
+    fill_in 'article_body', with: 'テストテスト'
+    find('input[name="commit"]').click
+  }.to change(Article, :count).by(1)
+
+
+
   end
 end
